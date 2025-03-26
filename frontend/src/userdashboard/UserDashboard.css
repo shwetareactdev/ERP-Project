@@ -1,0 +1,177 @@
+/* User Dashboard Styling */
+.user-dashboard-container {
+  text-align: center;
+  padding: 20px;
+  background: #f4f6f9; /* Light background color */
+}
+
+/* User Dashboard Navbar Styling */
+.user-dashboard-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px; /* Adjusted padding to keep navbar at 50px height */
+  background: linear-gradient(135deg, #ff4081, #ff60a0); /* Gradient navbar */
+  color: white;
+  border-bottom: 2px solid #ff60a0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  height: 50px; /* Navbar height fixed to 50px */
+  align-items: center; /* Vertically center the items */
+  position: relative;
+}
+
+.user-dashboard-title {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+.user-dashboard-buttons {
+  display: flex;
+  gap: 15px; /* Reduced gap between buttons */
+  align-items: center;
+}
+
+/* Reduced size of buttons */
+.user-dashboard-cart-btn,
+.user-dashboard-logout-btn {
+  background: #ffffff;
+  color: #ff4081;
+  padding: 8px 16px; /* Smaller padding for smaller buttons */
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ff4081;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-dashboard-cart-btn:hover,
+.user-dashboard-logout-btn:hover {
+  background: #ff4081;
+  color: white;
+  transform: scale(1.05); /* Subtle scale on hover */
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.user-dashboard-product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.user-dashboard-product-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.user-dashboard-product-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
+}
+
+.user-dashboard-product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-dashboard-product-card:hover .user-dashboard-product-image {
+  transform: scale(1.05); /* Image zoom effect on hover */
+}
+
+.user-dashboard-product-name {
+  font-size: 20px;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.user-dashboard-product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff4081;
+  margin-bottom: 15px;
+}
+
+.user-dashboard-add-to-cart-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Smaller padding for buttons */
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.user-dashboard-add-to-cart-btn:hover {
+  background: #218838;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .user-dashboard-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-dashboard-title {
+    margin-bottom: 15px;
+  }
+
+  .user-dashboard-buttons {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-dashboard-product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+
+  .user-dashboard-buttons.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-dashboard-navbar {
+    padding: 10px;
+  }
+
+  .user-dashboard-cart-btn,
+  .user-dashboard-logout-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .user-dashboard-product-list {
+    grid-template-columns: 1fr;
+  }
+}
